@@ -1,0 +1,36 @@
+{
+  "contract": "web4/1",
+  "generated": "2026-09-28",
+  "hub": "https://example.test/hub",
+  "wellKnown": "/.well-known/stack.json",
+  "principle": "Own the protocols, not the agents.",
+  "layers": [
+    {
+      "name": "identity",
+      "question": "Who are you?",
+      "repos": [
+        {
+          "name": "exists-without-url",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private"
+        },
+        {
+          "name": "draft-with-null-url",
+          "url": null,
+          "kind": "spec",
+          "status": "draft",
+          "visibility": "public"
+        },
+        {
+          "name": "planned-without-url-is-fine",
+          "kind": "spec",
+          "status": "planned",
+          "visibility": null
+        }
+      ]
+    }
+  ],
+  "tooling": [],
+  "teaching": []
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/FlashyLabs/stack.json/stack.schema.json",
+  "title": "web4/1 — the Web 4 stack index",
+  "description": "One document describing every layer of the agentic-internet stack the Flashy / Gord estate builds, and the repository that carries each part. Served at /.well-known/stack.json. Keys prefixed x- are extensions and are allowed anywhere; every other key is closed.",
+  "type": "object",
+  "required": ["contract", "generated", "hub", "wellKnown", "principle", "layers", "tooling", "teaching"],
+  "properties": {
+    "contract": { "const": "web4/1" },
+    "generated": {
+      "type": "string",
+      "description": "The date the statuses and visibilities were measured, YYYY-MM-DD.",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "hub": { "$ref": "#/$defs/httpsUrl", "description": "The human hub this index is the twin of." },
+    "wellKnown": { "$ref": "#/$defs/wellKnownPath" },
+    "principle": { "type": "string", "minLength": 1 },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/layer" }
+    },
+    "tooling": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/repo" }
+    },
+    "teaching": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/repo" }
+    }
+  },
+  "patternProperties": { "^x-": {} },
+  "additionalProperties": false,
+  "$defs": {
+    "httpsUrl": {
+      "type": "string",
+      "pattern": "^https://[^\\s]+$"
+    },
+    "wellKnownPath": {
+      "type": "string",
+      "pattern": "^/\\.well-known/[^\\s]+$"
+    },
+    "contractId": {
+      "type": "string",
+      "description": "A contract identifier: a lower-case slug, a slash, a dotted version.",
+      "pattern": "^[a-z0-9-]+/[0-9.]+$"
+    },
+    "layer": {
+      "type": "object",
+      "required": ["name", "question", "repos"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "question": { "type": "string", "minLength": 1 },
+        "repos": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/repo" }
+        }
+      },
+      "patternProperties": { "^x-": {} },
+      "additionalProperties": false
+    },
+    "repo": {
+      "type": "object",
+      "required": ["name", "kind", "status", "visibility"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": {
+          "description": "The repository URL. Required unless status is planned; a planned repository has no URL yet and says null.",
+          "oneOf": [
+            { "$ref": "#/$defs/httpsUrl" },
+            { "type": "null" }
+          ]
+        },
+        "kind": { "enum": ["spec", "impl", "spec+impl", "product", "tooling", "docs", "hub", "index"] },
+        "contract": { "$ref": "#/$defs/contractId" },
+        "status": { "enum": ["planned", "draft", "exists", "private-intended"] },
+        "visibility": {
+          "description": "The repository's GitHub visibility as measured on the generated date — never what was intended. null when there is no repository.",
+          "enum": ["public", "private", null]
+        },
+        "wellKnown": { "$ref": "#/$defs/wellKnownPath" }
+      },
+      "patternProperties": { "^x-": {} },
+      "additionalProperties": false,
+      "if": {
+        "properties": { "status": { "const": "planned" } },
+        "required": ["status"]
+      },
+      "then": {},
+      "else": {
+        "required": ["url"],
+        "properties": { "url": { "$ref": "#/$defs/httpsUrl" } }
+      }
+    }
+  }
+}

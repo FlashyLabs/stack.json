@@ -1,0 +1,26 @@
+{
+  "name": "@flashylabs/stack.json",
+  "version": "0.1.0",
+  "private": true,
+  "description": "web4/1 — the machine-readable index of the Web 4 / agentic-internet stack. One document, a schema, a dependency-free checker and the tests that keep them agreeing.",
+  "type": "module",
+  "main": "vendor-stack.mjs",
+  "exports": {
+    ".": "./vendor-stack.mjs",
+    "./stack.json": "./stack.json",
+    "./stack.schema.json": "./stack.schema.json"
+  },
+  "scripts": {
+    "check": "node vendor-stack.mjs check stack.json",
+    "list": "node vendor-stack.mjs list stack.json",
+    "lint": "node --check vendor-stack.mjs && node --check test/stack.test.mjs && node -e \"for (const f of ['stack.json','stack.schema.json','package.json']) JSON.parse(require('node:fs').readFileSync(f,'utf8'))\"",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlashyLabs/stack.json"
+  }
+}

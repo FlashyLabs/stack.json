@@ -1,0 +1,16 @@
+{
+  "contract": "web4/1",
+  "generated": "2026-09-28",
+  "hub": "https://example.test/hub",
+  "wellKnown": "/.well-known/stack.json",
+  "principle": "Own the protocols, not the agents.",
+  "layers": [
+    {
+      "name": "identity",
+      "question": "Who are you?",
+      "repos": []
+    }
+  ],
+  "tooling": [],
+  "teaching": []
+}

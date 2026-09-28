@@ -1,0 +1,26 @@
+{
+  "contract": "web4/1",
+  "generated": "2026-09-28",
+  "hub": "https://example.test/hub",
+  "wellKnown": "/.well-known/stack.json",
+  "principle": "Own the protocols, not the agents.",
+  "layers": [
+    {
+      "name": "discovery",
+      "question": "Who can accomplish this intent?",
+      "repos": [
+        {
+          "name": "one",
+          "url": "https://example.test/one",
+          "kind": "spec",
+          "contract": "intent/1",
+          "status": "draft",
+          "visibility": "public",
+          "wellKnown": "/intent.json"
+        }
+      ]
+    }
+  ],
+  "tooling": [],
+  "teaching": []
+}

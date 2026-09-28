@@ -1,0 +1,48 @@
+{
+  "contract": "web4/1",
+  "generated": "2026-09-28",
+  "hub": "https://example.test/hub",
+  "wellKnown": "/.well-known/stack.json",
+  "principle": "Own the protocols, not the agents.",
+  "x-measured-by": "tools/estate-stack.mjs",
+  "x-measured-at": "2026-09-28T09:00:00Z",
+  "layers": [
+    {
+      "name": "trust",
+      "question": "Should I deal with you?",
+      "x-order": 4,
+      "repos": [
+        {
+          "name": "trust-impl",
+          "url": "https://example.test/trust-impl",
+          "kind": "impl",
+          "contract": "trust/1",
+          "status": "exists",
+          "visibility": "private",
+          "wellKnown": "/.well-known/trust.json",
+          "x-note": "Extension keys are allowed on every object and carry whatever the publisher wants to say.",
+          "x-default-branch": "main"
+        },
+        {
+          "name": "trust-spec",
+          "url": null,
+          "kind": "spec",
+          "status": "planned",
+          "visibility": null,
+          "x-eta": "2026-Q4"
+        }
+      ]
+    }
+  ],
+  "tooling": [
+    {
+      "name": "kit",
+      "url": "https://example.test/kit",
+      "kind": "tooling",
+      "status": "exists",
+      "visibility": "public",
+      "x-version": "0.3.0"
+    }
+  ],
+  "teaching": []
+}

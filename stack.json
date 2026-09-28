@@ -1,0 +1,309 @@
+{
+  "contract": "web4/1",
+  "generated": "2026-09-28",
+  "hub": "https://github.com/FlashyLabs/web4",
+  "wellKnown": "/.well-known/stack.json",
+  "principle": "Own the open protocols through which agents discover, identify, authorize, trust, transact with and audit one another — not the agents.",
+  "layers": [
+    {
+      "name": "identity",
+      "question": "Who are you?",
+      "repos": [
+        {
+          "name": "flashyid-spec",
+          "url": "https://github.com/FlashyLabs/flashyid-spec",
+          "kind": "spec",
+          "contract": "delegation/1",
+          "status": "draft",
+          "visibility": "public"
+        },
+        {
+          "name": "flashyid",
+          "url": "https://github.com/FlashyLabs/flashyid",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private"
+        }
+      ]
+    },
+    {
+      "name": "graph",
+      "question": "What exists?",
+      "repos": [
+        {
+          "name": "agentgraph",
+          "url": "https://github.com/FlashyLabs/agentgraph",
+          "kind": "spec",
+          "contract": "graph/1",
+          "status": "draft",
+          "visibility": "public"
+        },
+        {
+          "name": "therealm",
+          "url": "https://github.com/FlashyLabs/therealm",
+          "kind": "impl",
+          "contract": "realm/1",
+          "status": "exists",
+          "visibility": "private"
+        }
+      ]
+    },
+    {
+      "name": "discovery",
+      "question": "Who can accomplish this intent?",
+      "repos": [
+        {
+          "name": "intent-spec",
+          "url": "https://github.com/FlashyLabs/intent-spec",
+          "kind": "spec",
+          "contract": "intent/1",
+          "status": "draft",
+          "visibility": "public",
+          "wellKnown": "/.well-known/intent.json"
+        },
+        {
+          "name": "intentmesh",
+          "url": "https://github.com/FlashyLabs/intentmesh",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private"
+        }
+      ]
+    },
+    {
+      "name": "trust",
+      "question": "Should I deal with you?",
+      "repos": [
+        {
+          "name": "magician",
+          "url": "https://github.com/FlashyLabs/magician",
+          "kind": "impl",
+          "contract": "trust/1",
+          "status": "exists",
+          "visibility": "private"
+        },
+        {
+          "name": "Rites-Network",
+          "url": "https://github.com/FlashyLabs/Rites-Network",
+          "kind": "impl",
+          "contract": "ritual/1",
+          "status": "exists",
+          "visibility": "private",
+          "wellKnown": "/.well-known/ritual.json"
+        },
+        {
+          "name": "trustgraph",
+          "url": null,
+          "kind": "spec",
+          "status": "planned",
+          "visibility": null
+        }
+      ]
+    },
+    {
+      "name": "gateway",
+      "question": "How do I connect to the old web?",
+      "repos": [
+        {
+          "name": "agent-wellknown",
+          "url": "https://github.com/FlashyLabs/agent-wellknown",
+          "kind": "spec",
+          "contract": "agent/1",
+          "status": "draft",
+          "visibility": "public",
+          "wellKnown": "/.well-known/agent"
+        },
+        {
+          "name": "agent-dns",
+          "url": "https://github.com/FlashyLabs/agent-dns",
+          "kind": "spec",
+          "contract": "agent-dns/1",
+          "status": "draft",
+          "visibility": "public"
+        },
+        {
+          "name": "bastion",
+          "url": "https://github.com/FlashyLabs/bastion",
+          "kind": "product",
+          "status": "private-intended",
+          "visibility": "public",
+          "x-note": "Intended to be a private repository; measured public on 2026-09-28. Both facts are recorded as found. The visibility here is what GitHub reports, not what was intended, and it stays public in this index until it is actually flipped."
+        }
+      ]
+    },
+    {
+      "name": "representation",
+      "question": "How is the org shown to machines?",
+      "repos": [
+        {
+          "name": "aao",
+          "url": "https://github.com/FlashyLabs/aao",
+          "kind": "spec+impl",
+          "contract": "aao/0.1",
+          "status": "exists",
+          "visibility": "private",
+          "wellKnown": "/.well-known/flashyos.json"
+        }
+      ]
+    },
+    {
+      "name": "execution",
+      "question": "How does it operate?",
+      "repos": [
+        {
+          "name": "flashyos",
+          "url": "https://github.com/FlashyLabs/flashyos",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private"
+        },
+        {
+          "name": "flashyos-spec",
+          "url": "https://github.com/FlashyLabs/flashyos-spec",
+          "kind": "spec",
+          "status": "exists",
+          "visibility": "public"
+        },
+        {
+          "name": "flashyos-tools",
+          "url": "https://github.com/FlashyLabs/flashyos-tools",
+          "kind": "tooling",
+          "status": "exists",
+          "visibility": "public"
+        },
+        {
+          "name": "agentfile",
+          "url": "https://github.com/FlashyLabs/agentfile",
+          "kind": "tooling",
+          "status": "exists",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "name": "commerce",
+      "question": "How does value move?",
+      "repos": [
+        {
+          "name": "agentpay",
+          "url": "https://github.com/FlashyLabs/agentpay",
+          "kind": "spec",
+          "contract": "pay-policy/1",
+          "status": "draft",
+          "visibility": "public"
+        },
+        {
+          "name": "flashyos-wdk",
+          "url": "https://github.com/FlashyLabs/flashyos-wdk",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "public"
+        },
+        {
+          "name": "flashy-rails",
+          "url": "https://github.com/FlashyLabs/flashy-rails",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private"
+        },
+        {
+          "name": "flashy-ledger",
+          "url": "https://github.com/FlashyLabs/flashy-ledger",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "public"
+        },
+        {
+          "name": "flashy-contracts",
+          "url": "https://github.com/FlashyLabs/flashy-contracts",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private"
+        }
+      ]
+    },
+    {
+      "name": "audit",
+      "question": "What happened?",
+      "repos": [
+        {
+          "name": "agentledger",
+          "url": null,
+          "kind": "spec",
+          "contract": "action-ledger/1",
+          "status": "planned",
+          "visibility": null
+        },
+        {
+          "name": "chronicle",
+          "url": "https://github.com/FlashyLabs/chronicle",
+          "kind": "impl",
+          "contract": "chronicle/1",
+          "status": "exists",
+          "visibility": "private"
+        },
+        {
+          "name": "flashy-network",
+          "url": "https://github.com/FlashyLabs/flashy-network",
+          "kind": "impl",
+          "status": "exists",
+          "visibility": "private",
+          "x-note": "Notary consumer: folds the estate's verification/1 and introduction/1 leaves into the public transparency log rather than emitting its own."
+        }
+      ]
+    }
+  ],
+  "tooling": [
+    {
+      "name": "conformance-kit",
+      "url": "https://github.com/FlashyLabs/conformance-kit",
+      "kind": "tooling",
+      "status": "exists",
+      "visibility": "public"
+    },
+    {
+      "name": "mesh-lint",
+      "url": "https://github.com/FlashyLabs/mesh-lint",
+      "kind": "tooling",
+      "status": "exists",
+      "visibility": "public"
+    },
+    {
+      "name": "flashy-infra",
+      "url": "https://github.com/FlashyLabs/flashy-infra",
+      "kind": "tooling",
+      "status": "exists",
+      "visibility": "private"
+    }
+  ],
+  "teaching": [
+    {
+      "name": "flashy-docs",
+      "url": "https://github.com/FlashyLabs/flashy-docs",
+      "kind": "docs",
+      "status": "exists",
+      "visibility": "public"
+    },
+    {
+      "name": "flashy-examples",
+      "url": "https://github.com/FlashyLabs/flashy-examples",
+      "kind": "docs",
+      "status": "exists",
+      "visibility": "public"
+    },
+    {
+      "name": "web4",
+      "url": "https://github.com/FlashyLabs/web4",
+      "kind": "hub",
+      "status": "draft",
+      "visibility": "public"
+    },
+    {
+      "name": "stack.json",
+      "url": "https://github.com/FlashyLabs/stack.json",
+      "kind": "index",
+      "status": "draft",
+      "visibility": "public"
+    }
+  ]
+}
