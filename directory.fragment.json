@@ -1,0 +1,80 @@
+{
+  "contract": "directory/1",
+  "generated": "2026-09-29",
+  "org": "org/stack-json",
+  "nodes": [
+    {
+      "id": "org/stack-json",
+      "kind": "org",
+      "name": "Stack Json"
+    },
+    {
+      "id": "person/michael",
+      "kind": "person",
+      "name": "Michael Gord"
+    },
+    {
+      "id": "agent/stack-json-canon",
+      "kind": "agent",
+      "name": "canon",
+      "for": "org/stack-json"
+    },
+    {
+      "id": "agent/stack-json-conformance",
+      "kind": "agent",
+      "name": "conformance",
+      "for": "org/stack-json"
+    },
+    {
+      "id": "agent/stack-json-release",
+      "kind": "agent",
+      "name": "release",
+      "for": "org/stack-json"
+    },
+    {
+      "id": "agent/stack-json-adoption",
+      "kind": "agent",
+      "name": "adoption",
+      "for": "org/stack-json"
+    },
+    {
+      "id": "agent/stack-json-review",
+      "kind": "agent",
+      "name": "review",
+      "for": "org/stack-json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "org/stack-json",
+      "rel": "staffs",
+      "to": "agent/stack-json-canon",
+      "by": "person/michael"
+    },
+    {
+      "from": "org/stack-json",
+      "rel": "staffs",
+      "to": "agent/stack-json-conformance",
+      "by": "person/michael"
+    },
+    {
+      "from": "org/stack-json",
+      "rel": "staffs",
+      "to": "agent/stack-json-release",
+      "by": "person/michael"
+    },
+    {
+      "from": "org/stack-json",
+      "rel": "staffs",
+      "to": "agent/stack-json-adoption",
+      "by": "person/michael"
+    },
+    {
+      "from": "org/stack-json",
+      "rel": "staffs",
+      "to": "agent/stack-json-review",
+      "by": "person/michael"
+    }
+  ],
+  "x-note": "Five agents, one per charter role. Generated from flashyos.roles.json; a live org is provisioned from the charter with provision-org-from-charter."
+}

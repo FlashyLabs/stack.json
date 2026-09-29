@@ -1,0 +1,97 @@
+{
+  "x-generated": "estate-charter/1; 2026-09-29; every role is one standing job, and five roles are five agents",
+  "aao": "0.1",
+  "name": "Stack Json",
+  "slug": "stack-json",
+  "description": "Stack Json — a specification on the FlashyOS mesh — a wire format published with a dependency-free checker, its conformance corpus and its versioned releases. AAO expands to Agentic Autonomous Organization.",
+  "accountableTo": "michael@gda.capital",
+  "escalation": "canon",
+  "repositories": [
+    {
+      "name": "stack.json",
+      "url": "github.com/FlashyLabs/stack.json",
+      "default": true,
+      "holds": [
+        "spec",
+        "schema",
+        "checker",
+        "conformance-corpus"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "name": "canon",
+      "family": "governance",
+      "purpose": "Publishes and maintains the normative specification — the schema, the conformance corpus and the dependency-free checker. The format refuses rather than guesses; a claim in the spec is checked, not decorative.",
+      "measure": "Normative sections carrying a conformance vector, as a share of the specification",
+      "capabilities": [
+        "publish-spec",
+        "revise-spec"
+      ],
+      "humanApprovalAtOrAbove": "HIGH",
+      "x-capability": [
+        "content-exchange"
+      ],
+      "worksIn": [
+        "stack.json"
+      ]
+    },
+    {
+      "name": "conformance",
+      "family": "engineering",
+      "purpose": "Runs the checker and the conformance vectors against every change, and reports which cases a fragment passes rather than a green tick that read nothing.",
+      "measure": "Conformance vectors passing, as a share of the published corpus",
+      "capabilities": [
+        "run-vectors",
+        "check-fragment"
+      ],
+      "humanApprovalAtOrAbove": "LOW",
+      "worksIn": [
+        "stack.json"
+      ]
+    },
+    {
+      "name": "release",
+      "family": "operations",
+      "purpose": "Cuts versioned releases with a changelog entry, so a version says what the package will refuse and never moves once it ships.",
+      "measure": "Releases with a changelog entry, as a share of tags",
+      "capabilities": [
+        "tag-version",
+        "publish-package"
+      ],
+      "humanApprovalAtOrAbove": "MEDIUM",
+      "worksIn": [
+        "stack.json"
+      ]
+    },
+    {
+      "name": "adoption",
+      "family": "growth",
+      "purpose": "Helps an independent adopter reach conformance and records real uptake, because a spec is a standard only after the first adopter and never before.",
+      "measure": "Independent adopters reaching level two, as a share of enquiries",
+      "capabilities": [
+        "guide-adopter",
+        "record-adopter"
+      ],
+      "humanApprovalAtOrAbove": "LOW",
+      "worksIn": [
+        "stack.json"
+      ]
+    },
+    {
+      "name": "review",
+      "family": "risk",
+      "purpose": "Reviews a normative change proposal before it lands, because a change to what a valid document is breaks every adopter downstream.",
+      "measure": "Normative changes carrying an approving review, as a share of merges",
+      "capabilities": [
+        "review-proposal",
+        "approve-change"
+      ],
+      "humanApprovalAtOrAbove": "HIGH",
+      "worksIn": [
+        "stack.json"
+      ]
+    }
+  ]
+}
