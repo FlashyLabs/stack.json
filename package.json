@@ -13,7 +13,7 @@
   "scripts": {
     "check": "node vendor-stack.mjs check stack.json",
     "list": "node vendor-stack.mjs list stack.json",
-    "lint": "node --check vendor-stack.mjs && node --check test/stack.test.mjs && node -e \"for (const f of ['stack.json','stack.schema.json','package.json']) JSON.parse(require('node:fs').readFileSync(f,'utf8'))\"",
+    "lint": "node --check vendor-stack.mjs && node --check vendor-aao-check.mjs && node --check test/stack.test.mjs && node --check test/charter-conformance.test.mjs && node --check test/mesh-references.test.mjs && node -e \"for (const f of ['stack.json','stack.schema.json','package.json','flashyos.roles.json','directory.fragment.json']) JSON.parse(require('node:fs').readFileSync(f,'utf8'))\"",
     "test": "node --test test/*.test.mjs"
   },
   "engines": {

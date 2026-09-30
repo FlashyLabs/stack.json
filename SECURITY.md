@@ -34,8 +34,9 @@ it is worse than you reported.
 
 - A repository listed here being private. The index maps what exists, not
   what a stranger can open.
-- The absence of a licence. It is declared once, in the estate's register, at
-  launch.
+- The licence. It is declared once, in the estate's register (flashyos
+  `tools/estate-licences.mjs`); this repository is Apache-2.0, holder Flashy
+  Labs, and carries the full text in `LICENSE`.
 
 ## Secrets
 

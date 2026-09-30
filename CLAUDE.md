@@ -74,8 +74,12 @@ field.
 | `stack.json` | The document. Re-measured, never hand-edited for a status. |
 | `stack.schema.json` | The contract, JSON Schema 2020-12. |
 | `vendor-stack.mjs` | The checker and CLI. `node:` builtins only. |
+| `vendor-aao-check.mjs` | The AAO charter checker `MESH.md` runs, byte-identical to `../aao/vendor-aao-check.mjs`. Re-vendor, never edit. |
+| `flashyos.roles.json` | The AAO charter (five roles); the mesh handshake and `directory.fragment.json` derive from it. |
 | `vectors/` | `valid-*.json` and `invalid-*.json`; one named error code per invalid vector. |
-| `test/stack.test.mjs` | The suite. |
+| `test/stack.test.mjs` | The document suite. |
+| `test/charter-conformance.test.mjs` | The charter validates and conforms under the vendored aao checker; a drift test reports UNKNOWN when `../aao` is absent. |
+| `test/mesh-references.test.mjs` | Every local file, script and filename `MESH.md` points at exists — a dangling reference is a red test. |
 | `.github/` | CI (lint + test, no install), issue and PR templates. |
 
 ## House rules — true in every repository in this estate
