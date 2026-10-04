@@ -1,0 +1,14 @@
+# Normalise line endings to LF in the working tree on every platform, so the
+# Windows CI runner (which defaults core.autocrlf=true) checks text out as LF.
+# Line-based tests then read the same bytes everywhere.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.pdf binary
